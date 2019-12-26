@@ -9,7 +9,6 @@ set ( SOURCES
 add_subdirectory(dlib dlib_build)
 
 add_executable( kkmeans ${SOURCES} kkmeans_ex.txt kkmeans_star_ex.txt )
-add_executable( kkmeans ${SOURCES} )
 
 set_target_properties(kkmeans PROPERTIES
     CXX_STANDARD 14
