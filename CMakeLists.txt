@@ -8,7 +8,8 @@ set ( SOURCES
 
 add_subdirectory(dlib dlib_build)
 
-add_executable( kkmeans ${SOURCES} kkmeans_ex.txt kkmeans_star_ex.txt )
+#add_executable( kkmeans ${SOURCES} kkmeans_ex.txt kkmeans_star_ex.txt )
+add_executable( kkmeans ${SOURCES} )
 
 set_target_properties(kkmeans PROPERTIES
     CXX_STANDARD 14
@@ -18,8 +19,8 @@ set_target_properties(kkmeans PROPERTIES
 target_link_libraries(kkmeans dlib::dlib)
 
 install(TARGETS kkmeans RUNTIME DESTINATION bin)
-install(FILES kkmeans_ex.txt RUNTIME DESTINATION bin)
-install(FILES kkmeans_star_ex.txt RUNTIME DESTINATION bin)
+#install(FILES kkmeans_ex.txt RUNTIME DESTINATION bin)
+#install(FILES kkmeans_star_ex.txt RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
